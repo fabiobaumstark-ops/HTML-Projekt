@@ -1,0 +1,494 @@
+/* =========================================================
+   F1 Garage – style.css
+   Farben werden oben als "Variablen" festgelegt.
+   So kann man das ganze Design an einer Stelle ändern.
+   ========================================================= */
+:root {
+  --bg: #0f0f13;          /* Hintergrund (fast schwarz, wie Asphalt) */
+  --card: #1b1b22;        /* Kartenfarbe */
+  --text: #f2f2f2;        /* Schriftfarbe */
+  --muted: #9a9aa5;       /* graue Schrift */
+  --accent: #e10600;      /* F1-Rot */
+  --radius: 18px;         /* runde Ecken */
+  --team: #e10600;        /* wird pro Team in JS überschrieben */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;  /* weiches Scrollen bei Klick auf Menü */
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  display: flex;                    /* Flexbox: Elemente nebeneinander */
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #000;
+  border-bottom: 3px solid var(--accent);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.logo-mark {
+  background: var(--accent);
+  padding: 2px 10px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.lang-btn {
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid var(--muted);
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.lang-btn:hover {
+  border-color: var(--text);
+}
+
+/* Die aktive Sprache wird weiß hervorgehoben */
+html[lang="de"] .lang-de,
+html[lang="en"] .lang-en {
+  color: var(--text);
+}
+
+/* ---------- NAV ---------- */
+.site-nav {
+  position: sticky;      /* Menü bleibt beim Scrollen oben */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 12px;
+  background: rgba(15, 15, 19, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* rote Linie unter dem Link, die beim Hover "hineinwächst" */
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.site-nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.hint {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* ---------- HERO (Begrüßung) ---------- */
+.hero {
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-style: italic;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 16px auto 32px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+}
+
+/* ---------- TEAM-GRID (Bento-Grid mit CSS-Grid) ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  gap: 16px;
+}
+
+/* Die ersten beiden Karten (Ferrari, Red Bull) sind doppelt so groß */
+.team-card.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 20px;
+  background: var(--card);
+  border-left: 6px solid var(--team);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Startzustand für die Einblend-Animation */
+  opacity: 0;
+  animation: fadeUp 0.6s forwards;
+}
+
+/* Farbverlauf in Teamfarbe im Hintergrund */
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--team) 0%, transparent 70%);
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.team-card:hover::before {
+  opacity: 0.6;
+}
+
+/* Klick-Effekt: Karte drückt sich kurz ein */
+.team-card:active {
+  transform: scale(0.97);
+}
+
+.team-card .short {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 2.6rem;
+  font-weight: 900;
+  font-style: italic;
+  opacity: 0.2;
+}
+
+.team-card.big .short {
+  font-size: 6rem;
+}
+
+.team-card h3 {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.team-card.big h3 {
+  font-size: 1.8rem;
+}
+
+.team-card p {
+  position: relative;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Teams ohne Detailseite sind etwas blasser */
+.team-card.soon {
+  cursor: default;
+  filter: grayscale(0.4);
+}
+
+.team-card.soon:hover {
+  transform: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- ÜBER UNS ---------- */
+.about-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.person {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 220px;
+}
+
+/* Platzhalter für das Passbild */
+.photo {
+  width: 110px;
+  height: 140px;
+  margin: 0 auto 12px;
+  border-radius: 10px;
+  background: #2a2a33;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.person p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  border-top: 3px solid var(--accent);
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- MODAL (Detailansicht) ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  /* versteckt */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  border-top: 6px solid var(--team);
+  padding: 32px;
+  transform: scale(0.9) translateY(30px);
+  transition: transform 0.35s;
+}
+
+.modal.open .modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Text im Modal */
+.modal-box h2 {
+  color: var(--team);
+}
+
+.team-info {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ---------- TIMELINE (Auto-Auswahl nach Jahr) ---------- */
+.timeline {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.timeline button {
+  flex: 0 0 auto;
+  background: #26262e;
+  color: var(--text);
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.timeline button:hover {
+  background: #33333d;
+}
+
+.timeline button.active {
+  background: var(--team);
+}
+
+/* ---------- AUTO-ANSICHT ---------- */
+.car-view {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  animation: fadeUp 0.4s;
+}
+
+.car-image {
+  background: #111;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+}
+
+.car-image svg,
+.car-image img {
+  width: 100%;
+  height: auto;
+}
+
+.specs {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs th,
+.specs td {
+  text-align: left;
+  padding: 8px 4px;
+  border-bottom: 1px solid #333;
+}
+
+.specs th {
+  color: var(--muted);
+  font-weight: 500;
+  width: 40%;
+}
+
+.car-desc {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+/* ---------- GALERIE ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.gallery .thumb {
+  background: #111;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.gallery .thumb:hover {
+  border-color: var(--team);
+  transform: scale(1.04);
+}
+
+.gallery h3,
+.modal-box h3 {
+  margin-top: 28px;
+}
+
+/* ---------- HANDY-ANSICHT (kleine Bildschirme) ---------- */
+@media (max-width: 800px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .car-view {
+    grid-template-columns: 1fr;
+  }
+  .site-nav {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-card.big {
+    grid-column: span 1;
+  }
+  .modal-box {
+    padding: 24px 16px;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F1 Garage – Formel 1 Teams</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: Logo, Titel und Sprachumschalter ===== -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-mark">F1</span>
+      <span class="logo-text">Garage</span>
+    </div>
+    <!-- Pflicht laut Projektauftrag: Seite auf Deutsch und Englisch -->
+    <div class="header-buttons">
+      <button id="lang-btn" class="lang-btn" type="button" aria-label="Sprache wechseln">
+        <span class="lang-de">DE</span> / <span class="lang-en">EN</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== NAV: Menü ===== -->
+  <nav class="site-nav">
+    <a href="#home" data-i18n="nav_home">Start</a>
+    <a href="#teams" data-i18n="nav_teams">Teams</a>
+    <a href="#about" data-i18n="nav_about">Über uns</a>
+  </nav>
+
+  <main>
+    <!-- ===== SECTION 1: Begrüßung ===== -->
+    <section id="home" class="hero">
+      <h1 data-i18n="hero_title">Willkommen in der F1 Garage!</h1>
+      <p data-i18n="hero_text">Entdecke die Teams der Formel 1, ihre aktuellen Autos und die Legenden aus der Vergangenheit.</p>
+      <a href="#teams" class="hero-btn" data-i18n="hero_btn">Zu den Teams</a>
+    </section>
+
+    <!-- ===== SECTION 2: Team-Grid (Bento-Grid) ===== -->
+    <section id="teams">
+      <h2 data-i18n="teams_title">Die Teams</h2>
+      <p class="hint" data-i18n="teams_hint">Klicke auf ein Team, um mehr zu erfahren.</p>
+      <!-- Die Team-Karten werden in script.js automatisch erzeugt -->
+      <div id="team-grid" class="team-grid"></div>
+    </section>
+
+    <!-- ===== SECTION 3: Über uns (mit Platz für Passbild) ===== -->
+    <section id="about" class="about">
+      <h2 data-i18n="about_title">Über uns</h2>
+      <div class="about-cards">
+        <div class="person">
+          <div class="photo">Foto</div>
+          <h3>Fabio Baumstark</h3>
+          <p data-i18n="about_class">TGM 11 – Josef-Durler-Schule Rastatt</p>
+        </div>
+        <div class="person">
+          <div class="photo">Foto</div>
+          <h3>Vorname Nachname</h3>
+          <p data-i18n="about_class">TGM 11 – Josef-Durler-Schule Rastatt</p>
+        </div>
+      </div>
+      <p data-i18n="about_text">Wir sind große Formel-1-Fans und haben diese Seite als Schulprojekt im Fach Informatik gebaut.</p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p><span data-i18n="footer_designed">Designed by</span> Fabio Baumstark &amp; Vorname Nachname</p>
+    <p class="small" data-i18n="footer_note">Schulprojekt – keine offizielle Seite der Formel 1.</p>
+  </footer>
+
+  <!-- ===== MODAL: Detailansicht eines Teams (am Anfang versteckt) ===== -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" type="button" aria-label="Schließen">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
