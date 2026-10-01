@@ -436,6 +436,34 @@ h2 {
   color: var(--muted);
 }
 
+/* 3D-Ansicht: Canvas füllt die Box, Hinweis unten links */
+#car-3d {
+  position: relative;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #2a2a33 0%, #111 75%);
+}
+
+.car-canvas {
+  display: block;
+  cursor: grab;
+  touch-action: pan-y;  /* auf dem Handy: seitlich drehen, hoch/runter scrollen */
+}
+
+.car-canvas:active {
+  cursor: grabbing;
+}
+
+.drag-hint {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
 /* ---------- GALERIE ---------- */
 .gallery {
   display: grid;
@@ -453,9 +481,25 @@ h2 {
   transition: border-color 0.3s, transform 0.3s;
 }
 
-.gallery .thumb:hover {
+.gallery .thumb:hover,
+.gallery .thumb.active {
   border-color: var(--team);
+}
+
+.gallery .thumb:hover {
   transform: scale(1.04);
+}
+
+.gallery .thumb img {
+  display: block;
+  width: 100%;
+}
+
+.gallery .thumb span {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .gallery h3,

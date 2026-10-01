@@ -32,7 +32,8 @@ const texts = {
     power: "Leistung",
     drivers: "Fahrer",
     cars_title: "Autos im Lauf der Zeit",
-    gallery_title: "Galerie"
+    gallery_title: "Galerie",
+    drag_hint: "Ziehen zum Drehen"
   },
   en: {
     nav_home: "Home",
@@ -57,13 +58,15 @@ const texts = {
     power: "Power",
     drivers: "Drivers",
     cars_title: "Cars through the years",
-    gallery_title: "Gallery"
+    gallery_title: "Gallery",
+    drag_hint: "Drag to rotate"
   }
 };
 
 // ---------- 2. DATEN ----------
 // Alle Teams der Saison 2026 mit ihren Autos.
 // size: "big" = große Kachel, "wide" = breite Kachel, ohne = kleine Kachel.
+// color/accent = Lackierung des 3D-Modells (Hauptfarbe / Flügel).
 // Hinweis: Die Zahlen sind gerundet – bitte vor der Präsentation nochmal prüfen!
 const teams = [
   {
@@ -82,6 +85,7 @@ const teams = [
     cars: [
       {
         name: "SF-26", year: 2026,
+        color: "#e8002d", accent: "#ffffff",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Charles Leclerc, Lewis Hamilton",
@@ -90,6 +94,7 @@ const teams = [
       },
       {
         name: "SF-24", year: 2024,
+        color: "#e8002d", accent: "#ffd700",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Charles Leclerc, Carlos Sainz",
@@ -98,6 +103,7 @@ const teams = [
       },
       {
         name: "F2004", year: 2004,
+        color: "#e10000", accent: "#ffffff",
         engine: "Ferrari 3,0 L V10",
         power: "ca. 900 PS",
         drivers: "Michael Schumacher, Rubens Barrichello",
@@ -106,6 +112,7 @@ const teams = [
       },
       {
         name: "312T", year: 1975,
+        color: "#d40000", accent: "#ffffff",
         engine: "Ferrari 3,0 L Boxer-12",
         power: "ca. 500 PS",
         drivers: "Niki Lauda, Clay Regazzoni",
@@ -130,6 +137,7 @@ const teams = [
     cars: [
       {
         name: "RB22", year: 2026,
+        color: "#1b2a55", accent: "#d4001f",
         engine: "Red Bull Ford 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Max Verstappen, Isack Hadjar",
@@ -138,6 +146,7 @@ const teams = [
       },
       {
         name: "RB19", year: 2023,
+        color: "#1b2a55", accent: "#d4001f",
         engine: "Honda RBPT 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Max Verstappen, Sergio Pérez",
@@ -146,6 +155,7 @@ const teams = [
       },
       {
         name: "RB9", year: 2013,
+        color: "#1b2a55", accent: "#d4001f",
         engine: "Renault 2,4 L V8",
         power: "ca. 750 PS",
         drivers: "Sebastian Vettel, Mark Webber",
@@ -154,6 +164,7 @@ const teams = [
       },
       {
         name: "RB6", year: 2010,
+        color: "#1b2a55", accent: "#d4001f",
         engine: "Renault 2,4 L V8",
         power: "ca. 750 PS",
         drivers: "Sebastian Vettel, Mark Webber",
@@ -178,6 +189,7 @@ const teams = [
     cars: [
       {
         name: "MCL40", year: 2026,
+        color: "#ff8000", accent: "#1a1a1a",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Lando Norris, Oscar Piastri",
@@ -186,6 +198,7 @@ const teams = [
       },
       {
         name: "MCL38", year: 2024,
+        color: "#ff8000", accent: "#1a1a1a",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Lando Norris, Oscar Piastri",
@@ -194,6 +207,7 @@ const teams = [
       },
       {
         name: "MP4/4", year: 1988,
+        color: "#e00000", accent: "#ffffff",
         engine: "Honda 1,5 L V6 Turbo",
         power: "ca. 650 PS",
         drivers: "Ayrton Senna, Alain Prost",
@@ -202,6 +216,7 @@ const teams = [
       },
       {
         name: "M23", year: 1974,
+        color: "#e00000", accent: "#ffffff",
         engine: "Ford Cosworth 3,0 L V8",
         power: "ca. 470 PS",
         drivers: "Emerson Fittipaldi, Denny Hulme",
@@ -226,6 +241,7 @@ const teams = [
     cars: [
       {
         name: "W17", year: 2026,
+        color: "#c8ccd0", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "George Russell, Kimi Antonelli",
@@ -234,6 +250,7 @@ const teams = [
       },
       {
         name: "W11", year: 2020,
+        color: "#1c1c1c", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Lewis Hamilton, Valtteri Bottas",
@@ -242,6 +259,7 @@ const teams = [
       },
       {
         name: "W05", year: 2014,
+        color: "#c8ccd0", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 850 PS",
         drivers: "Lewis Hamilton, Nico Rosberg",
@@ -250,6 +268,7 @@ const teams = [
       },
       {
         name: "W196", year: 1954,
+        color: "#c8ccd0", accent: "#c8ccd0",
         engine: "Mercedes 2,5 L Reihen-8",
         power: "ca. 290 PS",
         drivers: "Juan Manuel Fangio, Karl Kling",
@@ -273,6 +292,7 @@ const teams = [
     cars: [
       {
         name: "AMR26", year: 2026,
+        color: "#0b5c47", accent: "#cedc00",
         engine: "Honda 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Fernando Alonso, Lance Stroll",
@@ -281,6 +301,7 @@ const teams = [
       },
       {
         name: "AMR23", year: 2023,
+        color: "#0b5c47", accent: "#cedc00",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Fernando Alonso, Lance Stroll",
@@ -289,6 +310,7 @@ const teams = [
       },
       {
         name: "DBR4", year: 1959,
+        color: "#1d5a3a", accent: "#1d5a3a",
         engine: "Aston Martin 2,5 L Reihen-6",
         power: "ca. 250 PS",
         drivers: "Roy Salvadori, Carroll Shelby",
@@ -312,6 +334,7 @@ const teams = [
     cars: [
       {
         name: "A526", year: 2026,
+        color: "#0067b1", accent: "#ff87bc",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Pierre Gasly, Franco Colapinto",
@@ -320,6 +343,7 @@ const teams = [
       },
       {
         name: "A521", year: 2021,
+        color: "#0d1c47", accent: "#ff2d55",
         engine: "Renault 1,6 L V6 Turbo-Hybrid",
         power: "ca. 950 PS",
         drivers: "Fernando Alonso, Esteban Ocon",
@@ -328,6 +352,7 @@ const teams = [
       },
       {
         name: "Renault R25", year: 2005,
+        color: "#1a4ca0", accent: "#ffd200",
         engine: "Renault 3,0 L V10",
         power: "ca. 900 PS",
         drivers: "Fernando Alonso, Giancarlo Fisichella",
@@ -352,6 +377,7 @@ const teams = [
     cars: [
       {
         name: "FW48", year: 2026,
+        color: "#0a2a6b", accent: "#64c4ff",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Alexander Albon, Carlos Sainz",
@@ -360,6 +386,7 @@ const teams = [
       },
       {
         name: "FW18", year: 1996,
+        color: "#f2f2f2", accent: "#1e3c8c",
         engine: "Renault 3,0 L V10",
         power: "ca. 750 PS",
         drivers: "Damon Hill, Jacques Villeneuve",
@@ -368,6 +395,7 @@ const teams = [
       },
       {
         name: "FW14B", year: 1992,
+        color: "#f2f2f2", accent: "#1e3c8c",
         engine: "Renault 3,5 L V10",
         power: "ca. 760 PS",
         drivers: "Nigel Mansell, Riccardo Patrese",
@@ -376,6 +404,7 @@ const teams = [
       },
       {
         name: "FW07", year: 1980,
+        color: "#f2f2f2", accent: "#0a7a3a",
         engine: "Ford Cosworth 3,0 L V8",
         power: "ca. 480 PS",
         drivers: "Alan Jones, Carlos Reutemann",
@@ -399,6 +428,7 @@ const teams = [
     cars: [
       {
         name: "VCARB 03", year: 2026,
+        color: "#f2f2f2", accent: "#1b3fd8",
         engine: "Red Bull Ford 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Liam Lawson, Arvid Lindblad",
@@ -407,6 +437,7 @@ const teams = [
       },
       {
         name: "AlphaTauri AT01", year: 2020,
+        color: "#f2f2f2", accent: "#1b2a5c",
         engine: "Honda 1,6 L V6 Turbo-Hybrid",
         power: "ca. 950 PS",
         drivers: "Pierre Gasly, Daniil Kwjat",
@@ -415,6 +446,7 @@ const teams = [
       },
       {
         name: "Toro Rosso STR3", year: 2008,
+        color: "#1b2a5c", accent: "#d4001f",
         engine: "Ferrari 2,4 L V8",
         power: "ca. 750 PS",
         drivers: "Sebastian Vettel, Sébastien Bourdais",
@@ -438,6 +470,7 @@ const teams = [
     cars: [
       {
         name: "VF-26", year: 2026,
+        color: "#e6e6e6", accent: "#d4001f",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Esteban Ocon, Oliver Bearman",
@@ -446,6 +479,7 @@ const teams = [
       },
       {
         name: "VF-18", year: 2018,
+        color: "#2b2b2b", accent: "#d4001f",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 950 PS",
         drivers: "Romain Grosjean, Kevin Magnussen",
@@ -454,6 +488,7 @@ const teams = [
       },
       {
         name: "VF-16", year: 2016,
+        color: "#8c8f94", accent: "#d4001f",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 900 PS",
         drivers: "Romain Grosjean, Esteban Gutiérrez",
@@ -477,6 +512,7 @@ const teams = [
     cars: [
       {
         name: "R26", year: 2026,
+        color: "#9a9ea6", accent: "#f50537",
         engine: "Audi 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Nico Hülkenberg, Gabriel Bortoleto",
@@ -485,6 +521,7 @@ const teams = [
       },
       {
         name: "Sauber C45", year: 2025,
+        color: "#1f1f1f", accent: "#52e252",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Nico Hülkenberg, Gabriel Bortoleto",
@@ -493,6 +530,7 @@ const teams = [
       },
       {
         name: "BMW Sauber F1.08", year: 2008,
+        color: "#f2f2f2", accent: "#1f5fbf",
         engine: "BMW 2,4 L V8",
         power: "ca. 750 PS",
         drivers: "Robert Kubica, Nick Heidfeld",
@@ -516,6 +554,7 @@ const teams = [
     cars: [
       {
         name: "Cadillac F1", year: 2026,
+        color: "#1a1a1a", accent: "#ffffff",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "Sergio Pérez, Valtteri Bottas",
@@ -590,6 +629,7 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   openTeam = null;
+  if (use3D) viewer.stop(); // 3D-Animation anhalten, spart Akku
 }
 
 function renderModal() {
@@ -605,7 +645,7 @@ function renderModal() {
   // Galerie (alle Autos des Teams als kleine Bilder)
   let gallery = "";
   team.cars.forEach(function (car, i) {
-    gallery += `<div class="thumb" data-index="${i}" title="${car.name}">${carImage(car, team)}</div>`;
+    gallery += `<div class="thumb${i === openCarIndex ? " active" : ""}" data-index="${i}" title="${car.name}">${carImage(car, team)}<span>${car.year}</span></div>`;
   });
 
   modalContent.innerHTML = `
@@ -641,7 +681,7 @@ function renderCar() {
 
   document.getElementById("car-view").innerHTML = `
     <div class="car-view">
-      <div class="car-image">${carImage(car, openTeam)}</div>
+      <div class="car-image" id="car-3d">${use3D ? `<span class="drag-hint">↔ ${t.drag_hint}</span>` : carImage(car, openTeam)}</div>
       <table class="specs">
         <tr><th>${t.year}</th><td>${car.year}</td></tr>
         <tr><th>${t.engine}</th><td>${car.engine}</td></tr>
@@ -651,12 +691,21 @@ function renderCar() {
       <p class="car-desc">${car[lang]}</p>
     </div>
   `;
+
+  // 3D-Modell des Autos anzeigen (siehe car3d.js)
+  if (use3D) viewer.show(document.getElementById("car-3d"), car, openTeam);
 }
 
-// Eigenes Foto, falls vorhanden – sonst die Zeichnung
+// Kann der Browser 3D? Wenn nicht, werden einfache Zeichnungen gezeigt.
+const use3D = has3D();
+
+// Eigenes Foto, falls vorhanden – sonst Bild vom 3D-Modell oder die Zeichnung
 function carImage(car, team) {
   if (car.img) {
     return `<img src="${car.img}" alt="${car.name}">`;
+  }
+  if (use3D) {
+    return `<img src="${carThumbnail(car, team)}" alt="${car.name}">`;
   }
   return carDrawing(team.color);
 }
