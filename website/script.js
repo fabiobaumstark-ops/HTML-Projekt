@@ -541,7 +541,7 @@ const teams = [
       },
       {
         name: "MP4/13", year: 1998, champion: true,
-        color: "#c8ccd0", accent: "#1a1a1a",
+        color: "#aab0b6", accent: "#1a1a1a",
         engine: "Mercedes 3,0 L V10",
         power: "ca. 780 PS",
         drivers: "Mika Häkkinen, David Coulthard",
@@ -620,7 +620,7 @@ const teams = [
       },
       {
         name: "W06", year: 2015, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 900 PS",
         drivers: "Lewis Hamilton, Nico Rosberg",
@@ -629,7 +629,7 @@ const teams = [
       },
       {
         name: "W07", year: 2016, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 920 PS",
         drivers: "Nico Rosberg, Lewis Hamilton",
@@ -638,7 +638,7 @@ const teams = [
       },
       {
         name: "W08", year: 2017, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 940 PS",
         drivers: "Lewis Hamilton, Valtteri Bottas",
@@ -647,7 +647,7 @@ const teams = [
       },
       {
         name: "W09", year: 2018, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 950 PS",
         drivers: "Lewis Hamilton, Valtteri Bottas",
@@ -656,7 +656,7 @@ const teams = [
       },
       {
         name: "W10", year: 2019, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 950 PS",
         drivers: "Lewis Hamilton, Valtteri Bottas",
@@ -674,7 +674,7 @@ const teams = [
       },
       {
         name: "W17", year: 2026,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
         drivers: "George Russell, Kimi Antonelli",
@@ -692,7 +692,7 @@ const teams = [
       },
       {
         name: "W05", year: 2014, champion: true,
-        color: "#c8ccd0", accent: "#27f4d2",
+        color: "#aab0b6", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 850 PS",
         drivers: "Lewis Hamilton, Nico Rosberg",
@@ -701,7 +701,7 @@ const teams = [
       },
       {
         name: "W196", year: 1954,
-        color: "#c8ccd0", accent: "#c8ccd0",
+        color: "#9ea4ab", accent: "#9ea4ab",
         engine: "Mercedes 2,5 L Reihen-8",
         power: "ca. 290 PS",
         drivers: "Juan Manuel Fangio, Karl Kling",

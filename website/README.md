@@ -49,7 +49,7 @@ index.html
 
 ## So funktionieren die 3D-Modelle
 
-`car3d.js` setzt jedes Auto aus Boxen, Zylindern und Kugeln zusammen (wie Lego). Am Baujahr erkennt es die Epoche und ändert die Form:
+`car3d.js` baut jedes Auto per Programmcode. Die Karosserie besteht aus vielen Querschnitten (wie die Spanten eines Bootes), die zu einer glatten Hülle verbunden werden. Flügel haben echte Flügelprofile, der Lack glänzt und spiegelt ein unsichtbares Fotostudio. Am Baujahr erkennt das Programm die Epoche und ändert die Form:
 
 | Baujahr | Form |
 |---|---|

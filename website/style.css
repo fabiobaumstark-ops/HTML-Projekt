@@ -442,7 +442,7 @@ h2 {
   padding: 0;
   display: block;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 40%, #2a2a33 0%, #111 75%);
+  background: radial-gradient(ellipse at 50% 65%, #6a6a76 0%, #34343e 40%, #141418 85%);
 }
 
 .car-canvas {
@@ -473,7 +473,7 @@ h2 {
 }
 
 .gallery .thumb {
-  background: #111;
+  background: radial-gradient(ellipse at 50% 65%, #55555f 0%, #26262e 55%, #121215 100%);
   border-radius: 10px;
   padding: 8px;
   cursor: pointer;
