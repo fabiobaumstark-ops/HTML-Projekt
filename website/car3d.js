@@ -2,7 +2,7 @@
    F1 Garage – car3d.js
    Baut aus einfachen 3D-Formen (Boxen, Zylindern, Kugeln)
    ein Formel-1-Auto. Je nach Baujahr sieht das Auto anders aus:
-     bis 1965  Zigarre ohne Flügel
+     bis 1967  Zigarre ohne Flügel
      bis 1982  Keilform mit großem Heckflügel und Airbox
      bis 1993  flach und breit (Turbo-Zeit)
      bis 2008  hohe Nase, schmaler
@@ -13,7 +13,7 @@
 
 // ---------- Maße und Bauteile je nach Epoche ----------
 function eraParams(year) {
-  if (year < 1966) {
+  if (year < 1968) {
     return { era: "classic", wb: 2.3, track: 1.3, wheelR: 0.36, wheelW: 0.16, rearW: 0.2 };
   }
   if (year < 1983) {
@@ -319,7 +319,7 @@ const thumbCache = {};
 let thumbRenderer = null;
 
 function carThumbnail(car, team) {
-  const key = team.id + "-" + car.name;
+  const key = team.id + "-" + car.name + "-" + car.year;
   if (thumbCache[key]) return thumbCache[key];
   if (!thumbRenderer) {
     thumbRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });

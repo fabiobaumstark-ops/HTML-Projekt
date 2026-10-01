@@ -28,7 +28,8 @@ index.html
 ├── Header      Logo + DE/EN-Umschalter
 ├── Nav         Start · Teams · Über uns
 ├── Section #home   Begrüßung mit Button
-├── Section #teams  Bento-Grid mit allen 11 Teams
+├── Section #teams  Bento-Grid mit allen 11 Teams + „Legenden“
+│   │               (90 Autos, darunter alle 68 Weltmeister-Autos seit 1958)
 │   └── Klick auf ein Team → Modal (Detailansicht)
 │       ├── Team-Infos (Sitz, Gründung, Titel)
 │       ├── Timeline: aktuelles Auto + historische Autos
@@ -52,8 +53,8 @@ index.html
 
 | Baujahr | Form |
 |---|---|
-| bis 1965 | Zigarre ohne Flügel |
-| 1966–1982 | Keilform, großer Heckflügel, Airbox |
+| bis 1967 | Zigarre ohne Flügel |
+| 1968–1982 | Keilform, großer Heckflügel, Airbox |
 | 1983–1993 | flach und breit (Turbo-Zeit) |
 | 1994–2008 | hohe Nase |
 | 2009–2021 | lang, breiter Frontflügel, ab 2018 Halo |

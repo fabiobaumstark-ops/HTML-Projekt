@@ -33,6 +33,7 @@ const texts = {
     drivers: "Fahrer",
     cars_title: "Autos im Lauf der Zeit",
     gallery_title: "Galerie",
+    champ_hint: "🏆 = Konstrukteurs-Weltmeister",
     drag_hint: "Ziehen zum Drehen"
   },
   en: {
@@ -59,6 +60,7 @@ const texts = {
     drivers: "Drivers",
     cars_title: "Cars through the years",
     gallery_title: "Gallery",
+    champ_hint: "🏆 = Constructors' champion",
     drag_hint: "Drag to rotate"
   }
 };
@@ -84,6 +86,132 @@ const teams = [
     },
     cars: [
       {
+        name: "156", year: 1961, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 1,5 L V6",
+        power: "ca. 190 PS",
+        drivers: "Phil Hill, Wolfgang von Trips",
+        de: "Wegen seiner Nase „Haifischmaul“ genannt. Phil Hill wurde damit Weltmeister.",
+        en: "Nicknamed “Sharknose”. Phil Hill became world champion with it."
+      },
+      {
+        name: "158", year: 1964, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 1,5 L V8",
+        power: "ca. 210 PS",
+        drivers: "John Surtees, Lorenzo Bandini",
+        de: "John Surtees wurde damit Weltmeister – er ist bis heute der Einzige, der auf zwei und vier Rädern Weltmeister wurde.",
+        en: "John Surtees became champion with it – still the only world champion on both two and four wheels."
+      },
+      {
+        name: "312T2", year: 1976, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L Boxer-12",
+        power: "ca. 500 PS",
+        drivers: "Niki Lauda, Clay Regazzoni",
+        de: "Niki Lauda verunglückte damit am Nürburgring schwer und fuhr nur sechs Wochen später wieder.",
+        en: "Niki Lauda had a terrible crash at the Nürburgring and was racing again just six weeks later."
+      },
+      {
+        name: "312T2", year: 1977, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L Boxer-12",
+        power: "ca. 500 PS",
+        drivers: "Niki Lauda, Carlos Reutemann",
+        de: "Niki Lauda holte damit seinen zweiten Titel.",
+        en: "Niki Lauda won his second title with it."
+      },
+      {
+        name: "312T4", year: 1979, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L Boxer-12",
+        power: "ca. 515 PS",
+        drivers: "Jody Scheckter, Gilles Villeneuve",
+        de: "Jody Scheckter wurde damit Weltmeister – danach dauerte es 21 Jahre bis zum nächsten Ferrari-Fahrertitel.",
+        en: "Jody Scheckter became champion – Ferrari then waited 21 years for its next drivers' title."
+      },
+      {
+        name: "126C2", year: 1982, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 1,5 L V6 Turbo",
+        power: "ca. 600 PS",
+        drivers: "Gilles Villeneuve, Didier Pironi",
+        de: "Ein trauriges Jahr: Gilles Villeneuve starb in Zolder, trotzdem gewann Ferrari den Titel.",
+        en: "A sad year: Gilles Villeneuve died at Zolder, but Ferrari still won the title."
+      },
+      {
+        name: "126C3", year: 1983, champion: true,
+        color: "#d40000", accent: "#ffffff",
+        engine: "Ferrari 1,5 L V6 Turbo",
+        power: "ca. 650 PS",
+        drivers: "René Arnoux, Patrick Tambay",
+        de: "Einer der ersten Ferraris mit Chassis aus Kohlefaser.",
+        en: "One of the first Ferraris with a carbon-fibre chassis."
+      },
+      {
+        name: "F399", year: 1999, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L V10",
+        power: "ca. 800 PS",
+        drivers: "Michael Schumacher, Eddie Irvine",
+        de: "Schumacher brach sich ein Bein, also kämpfte Eddie Irvine bis zum Schluss um den Titel.",
+        en: "Schumacher broke his leg, so Eddie Irvine fought for the title until the last race."
+      },
+      {
+        name: "F1-2000", year: 2000, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L V10",
+        power: "ca. 810 PS",
+        drivers: "Michael Schumacher, Rubens Barrichello",
+        de: "Schumacher holte den ersten Ferrari-Fahrertitel seit 1979.",
+        en: "Schumacher won Ferrari's first drivers' title since 1979."
+      },
+      {
+        name: "F2001", year: 2001, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L V10",
+        power: "ca. 830 PS",
+        drivers: "Michael Schumacher, Rubens Barrichello",
+        de: "Schumacher wurde schon vier Rennen vor Schluss Weltmeister.",
+        en: "Schumacher clinched the title with four races to go."
+      },
+      {
+        name: "F2002", year: 2002, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L V10",
+        power: "ca. 850 PS",
+        drivers: "Michael Schumacher, Rubens Barrichello",
+        de: "Gewann 15 von 17 Rennen. Schumacher stand in jedem Rennen auf dem Podium.",
+        en: "Won 15 of 17 races. Schumacher finished on the podium in every race."
+      },
+      {
+        name: "F2003-GA", year: 2003, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 3,0 L V10",
+        power: "ca. 870 PS",
+        drivers: "Michael Schumacher, Rubens Barrichello",
+        de: "Benannt nach Fiat-Chef Gianni Agnelli. Schumacher holte seinen 6. Titel.",
+        en: "Named after Fiat boss Gianni Agnelli. Schumacher won his 6th title."
+      },
+      {
+        name: "F2007", year: 2007, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Kimi Räikkönen, Felipe Massa",
+        de: "Kimi Räikkönen wurde mit nur einem Punkt Vorsprung Weltmeister.",
+        en: "Kimi Räikkönen won the title by just one point."
+      },
+      {
+        name: "F2008", year: 2008, champion: true,
+        color: "#e10000", accent: "#ffffff",
+        engine: "Ferrari 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Felipe Massa, Kimi Räikkönen",
+        de: "Felipe Massa verlor den Fahrertitel in der letzten Kurve des letzten Rennens um einen Punkt.",
+        en: "Felipe Massa lost the drivers' title by one point in the last corner of the last race."
+      },
+      {
         name: "SF-26", year: 2026,
         color: "#e8002d", accent: "#ffffff",
         engine: "Ferrari 1,6 L V6 Turbo-Hybrid",
@@ -102,7 +230,7 @@ const teams = [
         en: "Won several races in 2024, including the Monaco Grand Prix with Charles Leclerc."
       },
       {
-        name: "F2004", year: 2004,
+        name: "F2004", year: 2004, champion: true,
         color: "#e10000", accent: "#ffffff",
         engine: "Ferrari 3,0 L V10",
         power: "ca. 900 PS",
@@ -111,7 +239,7 @@ const teams = [
         en: "One of the fastest cars of all time. Michael Schumacher won his 7th world title with it."
       },
       {
-        name: "312T", year: 1975,
+        name: "312T", year: 1975, champion: true,
         color: "#d40000", accent: "#ffffff",
         engine: "Ferrari 3,0 L Boxer-12",
         power: "ca. 500 PS",
@@ -136,6 +264,33 @@ const teams = [
     },
     cars: [
       {
+        name: "RB7", year: 2011, champion: true,
+        color: "#1b2a55", accent: "#d4001f",
+        engine: "Renault 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Sebastian Vettel, Mark Webber",
+        de: "Sebastian Vettel holte damit 15 Pole-Positions in einer Saison.",
+        en: "Sebastian Vettel took 15 pole positions in one season with it."
+      },
+      {
+        name: "RB8", year: 2012, champion: true,
+        color: "#1b2a55", accent: "#d4001f",
+        engine: "Renault 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Sebastian Vettel, Mark Webber",
+        de: "Vettel wurde im letzten Rennen in Brasilien zum dritten Mal Weltmeister.",
+        en: "Vettel won his third title at the final race in Brazil."
+      },
+      {
+        name: "RB18", year: 2022, champion: true,
+        color: "#1b2a55", accent: "#d4001f",
+        engine: "Honda RBPT 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 1000 PS",
+        drivers: "Max Verstappen, Sergio Pérez",
+        de: "Max Verstappen gewann damit 15 Rennen – damals ein Rekord.",
+        en: "Max Verstappen won 15 races with it – a record at the time."
+      },
+      {
         name: "RB22", year: 2026,
         color: "#1b2a55", accent: "#d4001f",
         engine: "Red Bull Ford 1,6 L V6 Turbo-Hybrid",
@@ -145,7 +300,7 @@ const teams = [
         en: "The first Red Bull car with its own engine, built together with Ford."
       },
       {
-        name: "RB19", year: 2023,
+        name: "RB19", year: 2023, champion: true,
         color: "#1b2a55", accent: "#d4001f",
         engine: "Honda RBPT 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
@@ -154,7 +309,7 @@ const teams = [
         en: "The most successful F1 car in history: 21 wins in 22 races."
       },
       {
-        name: "RB9", year: 2013,
+        name: "RB9", year: 2013, champion: true,
         color: "#1b2a55", accent: "#d4001f",
         engine: "Renault 2,4 L V8",
         power: "ca. 750 PS",
@@ -163,7 +318,7 @@ const teams = [
         en: "Sebastian Vettel won 9 races in a row and his 4th title with this car."
       },
       {
-        name: "RB6", year: 2010,
+        name: "RB6", year: 2010, champion: true,
         color: "#1b2a55", accent: "#d4001f",
         engine: "Renault 2,4 L V8",
         power: "ca. 750 PS",
@@ -171,6 +326,158 @@ const teams = [
         de: "Das Auto, mit dem Sebastian Vettel seinen ersten WM-Titel holte.",
         en: "The car that brought Sebastian Vettel his first world title."
       }
+    ]
+  },
+  {
+    id: "legends",
+    name: "Legenden",
+    name_en: "Legends",
+    short: "LEG",
+    color: "#2e8b57",
+    size: "big",
+    info: {
+      base: "England, Frankreich / England, France",
+      founded: "1958–1978",
+      titles: "15",
+      de: "Teams, die es heute nicht mehr gibt – aber die Weltmeister wurden: Vanwall, Cooper, BRM, Lotus, Brabham, Matra und Tyrrell.",
+      en: "Teams that no longer exist but won world titles: Vanwall, Cooper, BRM, Lotus, Brabham, Matra and Tyrrell."
+    },
+    cars: [
+      {
+        name: "Vanwall VW5", year: 1958, champion: true,
+        color: "#1d5a3a", accent: "#1d5a3a",
+        engine: "Vanwall 2,5 L Reihen-4",
+        power: "ca. 290 PS",
+        drivers: "Stirling Moss, Tony Brooks",
+        de: "Der allererste Konstrukteurs-Weltmeister der Formel 1.",
+        en: "The very first constructors' champion in Formula 1."
+      },
+      {
+        name: "Cooper T51", year: 1959, champion: true,
+        color: "#1d5a3a", accent: "#ffffff",
+        engine: "Coventry Climax 2,5 L Reihen-4",
+        power: "ca. 240 PS",
+        drivers: "Jack Brabham, Bruce McLaren",
+        de: "Hatte den Motor hinter dem Fahrer – seitdem bauen alle Teams so.",
+        en: "Had the engine behind the driver – every team has built cars that way ever since."
+      },
+      {
+        name: "Cooper T53", year: 1960, champion: true,
+        color: "#1d5a3a", accent: "#ffffff",
+        engine: "Coventry Climax 2,5 L Reihen-4",
+        power: "ca. 245 PS",
+        drivers: "Jack Brabham, Bruce McLaren",
+        de: "Jack Brabham holte damit seinen zweiten Titel.",
+        en: "Jack Brabham won his second title with it."
+      },
+      {
+        name: "BRM P57", year: 1962, champion: true,
+        color: "#2f5d3a", accent: "#ff8c00",
+        engine: "BRM 1,5 L V8",
+        power: "ca. 190 PS",
+        drivers: "Graham Hill, Richie Ginther",
+        de: "Graham Hill wurde damit zum ersten Mal Weltmeister.",
+        en: "Graham Hill won his first world title with it."
+      },
+      {
+        name: "Lotus 25", year: 1963, champion: true,
+        color: "#1d5a3a", accent: "#ffd400",
+        engine: "Coventry Climax 1,5 L V8",
+        power: "ca. 195 PS",
+        drivers: "Jim Clark, Trevor Taylor",
+        de: "Das erste F1-Auto mit einem Monocoque – Jim Clark gewann 7 von 10 Rennen.",
+        en: "The first F1 car with a monocoque – Jim Clark won 7 of 10 races."
+      },
+      {
+        name: "Lotus 33", year: 1965, champion: true,
+        color: "#1d5a3a", accent: "#ffd400",
+        engine: "Coventry Climax 1,5 L V8",
+        power: "ca. 210 PS",
+        drivers: "Jim Clark, Mike Spence",
+        de: "Jim Clark holte seinen zweiten Titel.",
+        en: "Jim Clark won his second title."
+      },
+      {
+        name: "Brabham BT19", year: 1966, champion: true,
+        color: "#1d5a3a", accent: "#ffd400",
+        engine: "Repco 3,0 L V8",
+        power: "ca. 310 PS",
+        drivers: "Jack Brabham, Denny Hulme",
+        de: "Jack Brabham wurde in seinem eigenen Auto Weltmeister – das schaffte sonst niemand.",
+        en: "Jack Brabham became champion in a car of his own – nobody else has done that."
+      },
+      {
+        name: "Brabham BT24", year: 1967, champion: true,
+        color: "#1d5a3a", accent: "#ffd400",
+        engine: "Repco 3,0 L V8",
+        power: "ca. 330 PS",
+        drivers: "Denny Hulme, Jack Brabham",
+        de: "Denny Hulme wurde damit Weltmeister.",
+        en: "Denny Hulme became world champion with it."
+      },
+      {
+        name: "Lotus 49B", year: 1968, champion: true,
+        color: "#c8102e", accent: "#ffffff",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 420 PS",
+        drivers: "Graham Hill, Jackie Oliver",
+        de: "Eines der ersten Autos mit Flügeln. Graham Hill holte seinen zweiten Titel.",
+        en: "One of the first cars with wings. Graham Hill won his second title."
+      },
+      {
+        name: "Matra MS80", year: 1969, champion: true,
+        color: "#1f4fa0", accent: "#ffffff",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 430 PS",
+        drivers: "Jackie Stewart, Jean-Pierre Beltoise",
+        de: "Jackie Stewart holte damit seinen ersten Titel.",
+        en: "Jackie Stewart won his first title with it."
+      },
+      {
+        name: "Lotus 72C", year: 1970, champion: true,
+        color: "#c8102e", accent: "#ffffff",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 440 PS",
+        drivers: "Jochen Rindt, Emerson Fittipaldi",
+        de: "Jochen Rindt verunglückte in Monza tödlich und wurde trotzdem Weltmeister.",
+        en: "Jochen Rindt was killed at Monza but still became world champion."
+      },
+      {
+        name: "Tyrrell 003", year: 1971, champion: true,
+        color: "#1f4fa0", accent: "#ffffff",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 450 PS",
+        drivers: "Jackie Stewart, François Cevert",
+        de: "Jackie Stewart holte seinen zweiten Titel.",
+        en: "Jackie Stewart won his second title."
+      },
+      {
+        name: "Lotus 72D", year: 1972, champion: true,
+        color: "#111111", accent: "#c9a227",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 450 PS",
+        drivers: "Emerson Fittipaldi, Dave Walker",
+        de: "Emerson Fittipaldi wurde mit 25 Jahren jüngster Weltmeister seiner Zeit.",
+        en: "Emerson Fittipaldi became the youngest champion of his time, aged 25."
+      },
+      {
+        name: "Lotus 72E", year: 1973, champion: true,
+        color: "#111111", accent: "#c9a227",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 460 PS",
+        drivers: "Emerson Fittipaldi, Ronnie Peterson",
+        de: "Der Lotus 72 fuhr insgesamt sechs Jahre lang und gewann 20 Rennen.",
+        en: "The Lotus 72 raced for six years and won 20 races in total."
+      },
+      {
+        name: "Lotus 79", year: 1978, champion: true,
+        color: "#111111", accent: "#c9a227",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 480 PS",
+        drivers: "Mario Andretti, Ronnie Peterson",
+        de: "Das erste richtige Ground-Effect-Auto: der Unterboden saugt das Auto auf die Straße.",
+        en: "The first true ground-effect car: the floor sucks the car onto the track."
+      },
     ]
   },
   {
@@ -188,6 +495,69 @@ const teams = [
     },
     cars: [
       {
+        name: "MP4/2", year: 1984, champion: true,
+        color: "#e00000", accent: "#ffffff",
+        engine: "TAG-Porsche 1,5 L V6 Turbo",
+        power: "ca. 750 PS",
+        drivers: "Niki Lauda, Alain Prost",
+        de: "Niki Lauda wurde mit einem halben Punkt Vorsprung vor Prost Weltmeister.",
+        en: "Niki Lauda beat Alain Prost to the title by half a point."
+      },
+      {
+        name: "MP4/2B", year: 1985, champion: true,
+        color: "#e00000", accent: "#ffffff",
+        engine: "TAG-Porsche 1,5 L V6 Turbo",
+        power: "ca. 800 PS",
+        drivers: "Alain Prost, Niki Lauda",
+        de: "Alain Prost holte damit seinen ersten Titel.",
+        en: "Alain Prost won his first title with it."
+      },
+      {
+        name: "MP4/5", year: 1989, champion: true,
+        color: "#e00000", accent: "#ffffff",
+        engine: "Honda 3,5 L V10",
+        power: "ca. 680 PS",
+        drivers: "Ayrton Senna, Alain Prost",
+        de: "Berühmt durch den Crash von Senna und Prost in Suzuka.",
+        en: "Famous for the crash between Senna and Prost at Suzuka."
+      },
+      {
+        name: "MP4/5B", year: 1990, champion: true,
+        color: "#e00000", accent: "#ffffff",
+        engine: "Honda 3,5 L V10",
+        power: "ca. 690 PS",
+        drivers: "Ayrton Senna, Gerhard Berger",
+        de: "Ayrton Senna holte seinen zweiten Titel.",
+        en: "Ayrton Senna won his second title."
+      },
+      {
+        name: "MP4/6", year: 1991, champion: true,
+        color: "#e00000", accent: "#ffffff",
+        engine: "Honda 3,5 L V12",
+        power: "ca. 735 PS",
+        drivers: "Ayrton Senna, Gerhard Berger",
+        de: "Sennas dritter und letzter WM-Titel.",
+        en: "Senna's third and last world title."
+      },
+      {
+        name: "MP4/13", year: 1998, champion: true,
+        color: "#c8ccd0", accent: "#1a1a1a",
+        engine: "Mercedes 3,0 L V10",
+        power: "ca. 780 PS",
+        drivers: "Mika Häkkinen, David Coulthard",
+        de: "Mika Häkkinen wurde damit zum ersten Mal Weltmeister.",
+        en: "Mika Häkkinen won his first world title with it."
+      },
+      {
+        name: "MCL39", year: 2025, champion: true,
+        color: "#ff8000", accent: "#1a1a1a",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 1000 PS",
+        drivers: "Lando Norris, Oscar Piastri",
+        de: "McLaren verteidigte damit den Konstrukteurs-Titel.",
+        en: "McLaren defended the constructors' title with it."
+      },
+      {
         name: "MCL40", year: 2026,
         color: "#ff8000", accent: "#1a1a1a",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
@@ -197,7 +567,7 @@ const teams = [
         en: "The current McLaren car built for the new 2026 rules."
       },
       {
-        name: "MCL38", year: 2024,
+        name: "MCL38", year: 2024, champion: true,
         color: "#ff8000", accent: "#1a1a1a",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
@@ -206,7 +576,7 @@ const teams = [
         en: "Won McLaren's first constructors' title since 1998."
       },
       {
-        name: "MP4/4", year: 1988,
+        name: "MP4/4", year: 1988, champion: true,
         color: "#e00000", accent: "#ffffff",
         engine: "Honda 1,5 L V6 Turbo",
         power: "ca. 650 PS",
@@ -215,7 +585,7 @@ const teams = [
         en: "A legend: 15 wins in 16 races. Ayrton Senna won his first world title with it."
       },
       {
-        name: "M23", year: 1974,
+        name: "M23", year: 1974, champion: true,
         color: "#e00000", accent: "#ffffff",
         engine: "Ford Cosworth 3,0 L V8",
         power: "ca. 470 PS",
@@ -234,11 +604,74 @@ const teams = [
     info: {
       base: "Brackley, England",
       founded: "2010 (1954)",
-      titles: "8",
+      titles: "8 (+1 als Brawn / as Brawn)",
       de: "Die „Silberpfeile“ gewannen von 2014 bis 2021 acht Konstrukteurs-Titel in Folge.",
       en: "The “Silver Arrows” won eight constructors' titles in a row from 2014 to 2021."
     },
     cars: [
+      {
+        name: "Brawn BGP 001", year: 2009, champion: true,
+        color: "#f2f2f2", accent: "#cedc00",
+        engine: "Mercedes 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Jenson Button, Rubens Barrichello",
+        de: "Das Vorgänger-Team von Mercedes gewann in seiner einzigen Saison beide Titel.",
+        en: "Mercedes' predecessor team won both titles in its only season."
+      },
+      {
+        name: "W06", year: 2015, champion: true,
+        color: "#c8ccd0", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 900 PS",
+        drivers: "Lewis Hamilton, Nico Rosberg",
+        de: "Lewis Hamilton holte seinen dritten Titel.",
+        en: "Lewis Hamilton won his third title."
+      },
+      {
+        name: "W07", year: 2016, champion: true,
+        color: "#c8ccd0", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 920 PS",
+        drivers: "Nico Rosberg, Lewis Hamilton",
+        de: "Nico Rosberg wurde Weltmeister und hörte danach sofort auf.",
+        en: "Nico Rosberg became champion and retired straight away."
+      },
+      {
+        name: "W08", year: 2017, champion: true,
+        color: "#c8ccd0", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 940 PS",
+        drivers: "Lewis Hamilton, Valtteri Bottas",
+        de: "Das erste Auto nach den Regeln für breitere, schnellere Autos.",
+        en: "The first car built for the rules that made cars wider and faster."
+      },
+      {
+        name: "W09", year: 2018, champion: true,
+        color: "#c8ccd0", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 950 PS",
+        drivers: "Lewis Hamilton, Valtteri Bottas",
+        de: "Das erste Mercedes mit dem Halo-Kopfschutz.",
+        en: "The first Mercedes with the halo head protection."
+      },
+      {
+        name: "W10", year: 2019, champion: true,
+        color: "#c8ccd0", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 950 PS",
+        drivers: "Lewis Hamilton, Valtteri Bottas",
+        de: "Lewis Hamilton holte seinen 6. Titel.",
+        en: "Lewis Hamilton won his 6th title."
+      },
+      {
+        name: "W12", year: 2021, champion: true,
+        color: "#1c1c1c", accent: "#27f4d2",
+        engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
+        power: "ca. 1000 PS",
+        drivers: "Lewis Hamilton, Valtteri Bottas",
+        de: "Der achte Konstrukteurs-Titel in Folge – den Fahrertitel holte Verstappen.",
+        en: "The eighth constructors' title in a row – Verstappen won the drivers' title."
+      },
       {
         name: "W17", year: 2026,
         color: "#c8ccd0", accent: "#27f4d2",
@@ -249,7 +682,7 @@ const teams = [
         en: "The current Mercedes car built for the new 2026 rules."
       },
       {
-        name: "W11", year: 2020,
+        name: "W11", year: 2020, champion: true,
         color: "#1c1c1c", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 1000 PS",
@@ -258,7 +691,7 @@ const teams = [
         en: "Seen as one of the fastest F1 cars ever. Hamilton won his 7th title with it."
       },
       {
-        name: "W05", year: 2014,
+        name: "W05", year: 2014, champion: true,
         color: "#c8ccd0", accent: "#27f4d2",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
         power: "ca. 850 PS",
@@ -327,11 +760,29 @@ const teams = [
     info: {
       base: "Enstone, England",
       founded: "2021 (Renault)",
-      titles: "2 (als Renault / as Renault)",
+      titles: "3 (als Benetton und Renault / as Benetton and Renault)",
       de: "Das Team gehört zu Renault. Unter dem Namen Renault wurde Fernando Alonso 2005 und 2006 Weltmeister.",
       en: "The team belongs to Renault. Under the Renault name, Fernando Alonso won the 2005 and 2006 titles."
     },
     cars: [
+      {
+        name: "Benetton B195", year: 1995, champion: true,
+        color: "#1b4fa0", accent: "#3cb44b",
+        engine: "Renault 3,0 L V10",
+        power: "ca. 700 PS",
+        drivers: "Michael Schumacher, Johnny Herbert",
+        de: "Das Team hieß damals Benetton. Michael Schumacher holte seinen zweiten Titel.",
+        en: "Back then the team was called Benetton. Michael Schumacher won his second title."
+      },
+      {
+        name: "Renault R26", year: 2006, champion: true,
+        color: "#1a4ca0", accent: "#ffd200",
+        engine: "Renault 2,4 L V8",
+        power: "ca. 750 PS",
+        drivers: "Fernando Alonso, Giancarlo Fisichella",
+        de: "Fernando Alonso gewann das Titelduell gegen Michael Schumacher.",
+        en: "Fernando Alonso won the title fight against Michael Schumacher."
+      },
       {
         name: "A526", year: 2026,
         color: "#0067b1", accent: "#ff87bc",
@@ -351,7 +802,7 @@ const teams = [
         en: "Esteban Ocon won the Hungarian Grand Prix with it as a big surprise."
       },
       {
-        name: "Renault R25", year: 2005,
+        name: "Renault R25", year: 2005, champion: true,
         color: "#1a4ca0", accent: "#ffd200",
         engine: "Renault 3,0 L V10",
         power: "ca. 900 PS",
@@ -376,6 +827,60 @@ const teams = [
     },
     cars: [
       {
+        name: "FW07C", year: 1981, champion: true,
+        color: "#f2f2f2", accent: "#0a7a3a",
+        engine: "Ford Cosworth 3,0 L V8",
+        power: "ca. 490 PS",
+        drivers: "Alan Jones, Carlos Reutemann",
+        de: "Williams verteidigte damit den Konstrukteurs-Titel.",
+        en: "Williams defended the constructors' title with it."
+      },
+      {
+        name: "FW11", year: 1986, champion: true,
+        color: "#f2f2f2", accent: "#1e3c8c",
+        engine: "Honda 1,5 L V6 Turbo",
+        power: "ca. 1000 PS",
+        drivers: "Nigel Mansell, Nelson Piquet",
+        de: "Im Qualifying hatte der Turbo über 1000 PS. Mansell verlor den Titel durch einen Reifenplatzer.",
+        en: "In qualifying the turbo made over 1000 hp. Mansell lost the title after a tyre blew."
+      },
+      {
+        name: "FW11B", year: 1987, champion: true,
+        color: "#f2f2f2", accent: "#1e3c8c",
+        engine: "Honda 1,5 L V6 Turbo",
+        power: "ca. 1000 PS",
+        drivers: "Nelson Piquet, Nigel Mansell",
+        de: "Nelson Piquet holte seinen dritten Titel.",
+        en: "Nelson Piquet won his third title."
+      },
+      {
+        name: "FW15C", year: 1993, champion: true,
+        color: "#f2f2f2", accent: "#1e3c8c",
+        engine: "Renault 3,5 L V10",
+        power: "ca. 780 PS",
+        drivers: "Alain Prost, Damon Hill",
+        de: "Voll mit Technik: aktive Federung, Traktionskontrolle und ABS. Prost holte seinen 4. Titel.",
+        en: "Full of tech: active suspension, traction control and ABS. Prost won his 4th title."
+      },
+      {
+        name: "FW16", year: 1994, champion: true,
+        color: "#f2f2f2", accent: "#1e3c8c",
+        engine: "Renault 3,5 L V10",
+        power: "ca. 790 PS",
+        drivers: "Ayrton Senna, Damon Hill",
+        de: "Ayrton Senna verunglückte in diesem Auto in Imola tödlich.",
+        en: "Ayrton Senna lost his life in this car at Imola."
+      },
+      {
+        name: "FW19", year: 1997, champion: true,
+        color: "#c8102e", accent: "#ffffff",
+        engine: "Renault 3,0 L V10",
+        power: "ca. 760 PS",
+        drivers: "Jacques Villeneuve, Heinz-Harald Frentzen",
+        de: "Jacques Villeneuve gewann das Titelduell gegen Michael Schumacher.",
+        en: "Jacques Villeneuve won the title fight against Michael Schumacher."
+      },
+      {
         name: "FW48", year: 2026,
         color: "#0a2a6b", accent: "#64c4ff",
         engine: "Mercedes 1,6 L V6 Turbo-Hybrid",
@@ -385,7 +890,7 @@ const teams = [
         en: "The current Williams car built for the new 2026 rules."
       },
       {
-        name: "FW18", year: 1996,
+        name: "FW18", year: 1996, champion: true,
         color: "#f2f2f2", accent: "#1e3c8c",
         engine: "Renault 3,0 L V10",
         power: "ca. 750 PS",
@@ -394,7 +899,7 @@ const teams = [
         en: "Damon Hill became world champion, Williams won 12 of 16 races."
       },
       {
-        name: "FW14B", year: 1992,
+        name: "FW14B", year: 1992, champion: true,
         color: "#f2f2f2", accent: "#1e3c8c",
         engine: "Renault 3,5 L V10",
         power: "ca. 760 PS",
@@ -403,7 +908,7 @@ const teams = [
         en: "Had computer-controlled “active suspension” – lots of mechatronics!"
       },
       {
-        name: "FW07", year: 1980,
+        name: "FW07", year: 1980, champion: true,
         color: "#f2f2f2", accent: "#0a7a3a",
         engine: "Ford Cosworth 3,0 L V8",
         power: "ca. 480 PS",
@@ -565,6 +1070,16 @@ const teams = [
   }
 ];
 
+// Autos jedes Teams nach Jahr sortieren (neuestes zuerst)
+teams.forEach(function (team) {
+  team.cars.sort(function (a, b) { return b.year - a.year; });
+});
+
+// Teamname in der aktuellen Sprache (nur "Legenden" hat einen englischen Namen)
+function teamName(team) {
+  return lang === "en" && team.name_en ? team.name_en : team.name;
+}
+
 // Aktuelle Sprache (Startwert: Deutsch)
 let lang = "de";
 // Welches Team gerade im Modal offen ist
@@ -599,7 +1114,7 @@ function buildGrid() {
 
     card.innerHTML = `
       <span class="short">${team.short}</span>
-      <h3>${team.name}</h3>
+      <h3>${teamName(team)}</h3>
       <p>${texts[lang].more}</p>
     `;
 
@@ -639,7 +1154,7 @@ function renderModal() {
   // Timeline-Buttons (ein Button pro Auto)
   let timeline = "";
   team.cars.forEach(function (car, i) {
-    timeline += `<button class="${i === openCarIndex ? "active" : ""}" data-index="${i}">${car.year} · ${car.name}</button>`;
+    timeline += `<button class="${i === openCarIndex ? "active" : ""}" data-index="${i}">${car.champion ? "🏆 " : ""}${car.year} · ${car.name}</button>`;
   });
 
   // Galerie (alle Autos des Teams als kleine Bilder)
@@ -649,13 +1164,14 @@ function renderModal() {
   });
 
   modalContent.innerHTML = `
-    <h2>${team.name}</h2>
+    <h2>${teamName(team)}</h2>
     <p class="team-info">
       ${t.base}: ${team.info.base} · ${t.founded}: ${team.info.founded} · ${t.titles}: ${team.info.titles}<br>
       ${team.info[lang]}
     </p>
 
     <h3>${t.cars_title}</h3>
+    <p class="hint">${t.champ_hint}</p>
     <div class="timeline">${timeline}</div>
     <div id="car-view"></div>
 
