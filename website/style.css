@@ -165,13 +165,18 @@ h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 160px;
+  grid-auto-flow: dense;  /* füllt Lücken im Grid automatisch auf */
   gap: 16px;
 }
 
-/* Die ersten beiden Karten (Ferrari, Red Bull) sind doppelt so groß */
+/* Große Kacheln (Ferrari, Red Bull) und breite Kacheln */
 .team-card.big {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.team-card.wide {
+  grid-column: span 2;
 }
 
 .team-card {
@@ -242,16 +247,6 @@ h2 {
   position: relative;
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-/* Teams ohne Detailseite sind etwas blasser */
-.team-card.soon {
-  cursor: default;
-  filter: grayscale(0.4);
-}
-
-.team-card.soon:hover {
-  transform: none;
 }
 
 @keyframes fadeUp {
@@ -485,7 +480,8 @@ h2 {
   .team-grid {
     grid-template-columns: 1fr;
   }
-  .team-card.big {
+  .team-card.big,
+  .team-card.wide {
     grid-column: span 1;
   }
   .modal-box {

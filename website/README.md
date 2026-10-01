@@ -27,7 +27,7 @@ index.html
 ├── Nav         Start · Teams · Über uns
 ├── Section #home   Begrüßung mit Button
 ├── Section #teams  Bento-Grid mit allen 11 Teams
-│   └── Klick auf Ferrari oder Red Bull → Modal (Detailansicht)
+│   └── Klick auf ein Team → Modal (Detailansicht)
 │       ├── Team-Infos (Sitz, Gründung, Titel)
 │       ├── Timeline: aktuelles Auto + historische Autos
 │       ├── Technische Daten (Jahr, Motor, Leistung, Fahrer)
@@ -39,7 +39,7 @@ index.html
 ## Design-Ideen
 
 - **Farben:** dunkler Hintergrund wie Asphalt (`#0f0f13`), F1-Rot (`#e10600`) als Akzent, jede Karte in ihrer Teamfarbe.
-- **Bento-Grid:** große Kacheln für Teams mit Details, kleine für den Rest (CSS-Grid mit `grid-column: span 2`).
+- **Bento-Grid:** große Kacheln für Ferrari und Red Bull, breite und kleine für den Rest (CSS-Grid mit `grid-column: span 2` und `grid-auto-flow: dense`).
 - **Animationen:** Karten fliegen beim Laden nacheinander ein, heben sich beim Hover, drücken sich beim Klick ein. Das Modal zoomt weich auf.
 - **Bedienung:** Modal schließt mit X, Klick daneben oder Escape-Taste. Menü bleibt beim Scrollen oben.
 
@@ -47,6 +47,6 @@ index.html
 
 1. **Eure Namen und Fotos** in `index.html` eintragen (sucht nach „Vorname Nachname“ und „Foto“).
 2. **Echte Auto-Bilder:** Bild in `img/` legen und in `script.js` beim Auto eine Zeile ergänzen, z. B. `img: "img/sf26.jpg",`. Achtet darauf, dass ihr die Bilder benutzen dürft (z. B. Wikimedia Commons) und schreibt die Quelle dazu.
-3. **Weitere Teams:** bei einem Team in `script.js` `info` und `cars` ergänzen, genau wie bei Ferrari. Die Karte wird dann automatisch groß und klickbar.
+3. **Mehr Autos:** bei einem Team in `script.js` in der Liste `cars` einfach ein weiteres Auto ergänzen. Es erscheint dann automatisch in der Zeitleiste und Galerie.
 4. **Daten prüfen:** Die Zahlen (PS, Fahrer, Titel) sind gerundet. Bitte vor der Präsentation nochmal nachschauen.
 5. **Ideen für mehr JS:** Dark/Light-Modus, Quiz „Welches Auto ist das?“, Countdown bis zum nächsten Rennen.
