@@ -1,0 +1,281 @@
+/* ===== Pit-Lane: unser Design =====
+   Die Seite ist dunkel, nur der Showroom ist weiß. */
+
+/* ----- Ganze Seite ----- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111318;
+  color: #f2f2f2;
+}
+
+html {
+  scroll-behavior: smooth;   /* weiches Scrollen beim Klick im Menü */
+}
+
+section {
+  padding: 40px 10%;
+}
+
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+a {
+  color: #ff4d4d;
+}
+
+.klein {
+  font-size: 13px;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.rot {
+  color: #e10600;
+}
+
+/* ----- Header ----- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+  background-color: #000000;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.sprache button {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sprache button.aktiv {
+  background-color: #e10600;   /* gewählte Sprache ist rot */
+}
+
+/* ----- Nav: bleibt beim Scrollen oben ----- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1b1e25;
+  padding: 12px 10%;
+}
+
+nav a {
+  color: #dddddd;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+nav a:hover {
+  color: #e10600;
+}
+
+/* ----- Showroom (weiß) ----- */
+#showroom {
+  background: linear-gradient(#e9ebef, #ffffff);   /* hellgraue Wand, weißer Boden */
+  color: #111318;
+}
+
+#team {
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  border-bottom: 4px solid #dc0000;   /* Farbe wird per JavaScript geändert */
+}
+
+#autoname {
+  font-size: 70px;
+  margin: 10px 0;
+}
+
+.buehne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#autobild {
+  width: 70%;
+  max-width: 800px;
+  border-radius: 12px;   /* runde Ecken bei echten Fotos */
+}
+
+.quelle {
+  text-align: center;
+  font-size: 12px;
+  color: #777777;
+  min-height: 15px;
+}
+
+.pfeil {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pfeil:hover {
+  background-color: #111318;
+  color: white;
+}
+
+.daten {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.daten th {
+  color: #777777;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 8px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.daten td {
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* ----- Alle Autos: Raster mit Karten (CSS-Grid) ----- */
+.hinweis {
+  color: #999999;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.karte {
+  background-color: #1f232b;
+  border: 2px solid #1f232b;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.karte:hover {
+  transform: translateY(-5px);   /* Karte hebt sich beim Drüberfahren */
+  border-color: #555555;
+}
+
+.karte.gewaehlt {
+  border-color: #e10600;
+}
+
+.karte img {
+  width: 100%;
+  aspect-ratio: 2 / 1;      /* alle Bilder gleich hoch */
+  object-fit: cover;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.karte h3 {
+  margin: 0;
+}
+
+.karte .klein {
+  margin: 8px 0 0 0;
+}
+
+/* ----- Saison: drei Boxen nebeneinander ----- */
+.spalten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.box {
+  flex: 1;
+  min-width: 250px;
+  background-color: #1f232b;
+  border-top: 4px solid #e10600;
+  border-radius: 8px;
+  padding: 0 20px 10px 20px;
+  color: #cccccc;
+}
+
+.box h3 {
+  color: white;
+}
+
+/* ----- Über uns ----- */
+.person {
+  flex: 1;
+  min-width: 250px;
+  background-color: #1f232b;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.person img {
+  width: 120px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.person h3 {
+  margin-bottom: 0;
+}
+
+.person p {
+  color: #999999;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #e10600;
+}
+
+/* ----- Handy (schmaler Bildschirm) ----- */
+@media (max-width: 700px) {
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  section {
+    padding: 30px 5%;
+  }
+  #autoname {
+    font-size: 44px;
+  }
+  .raster {
+    grid-template-columns: 1fr 1fr;   /* auf dem Handy 2 Autos nebeneinander */
+  }
+  .pfeil {
+    width: 38px;
+    height: 38px;
+  }
+  .daten th, .daten td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}

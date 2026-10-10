@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- Pit-Lane: unsere Formel-1-Website (HTML-Projekt TGM 11) -->
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pit-Lane – Formel 1 Saison 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER: Logo, Willkommensgruß und Sprachumschalter -->
+  <header>
+    <h1 class="logo">PIT<span class="rot">-</span>LANE</h1>
+    <p id="gruss" data-de="Willkommen in unserem Formel-1-Showroom!" data-en="Welcome to our Formula 1 showroom!">Willkommen in unserem Formel-1-Showroom!</p>
+    <div class="sprache">
+      <button id="knopf-de" class="aktiv" onclick="setzeSprache('de')">DE</button>
+      <button id="knopf-en" onclick="setzeSprache('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- NAV: Menü -->
+  <nav>
+    <a href="#showroom" data-de="Showroom" data-en="Showroom">Showroom</a>
+    <a href="#autos" data-de="Alle Autos" data-en="All cars">Alle Autos</a>
+    <a href="#saison" data-de="Saison 2026" data-en="Season 2026">Saison 2026</a>
+    <a href="#ueber-uns" data-de="Über uns" data-en="About us">Über uns</a>
+  </nav>
+
+  <!-- SECTION 1: Showroom mit dem ausgewählten Auto -->
+  <section id="showroom">
+    <p class="klein" data-de="Formel 1 · Saison 2026" data-en="Formula 1 · Season 2026">Formel 1 · Saison 2026</p>
+    <p id="team">Ferrari</p>
+    <h2 id="autoname">SF-26</h2>
+
+    <div class="buehne">
+      <button class="pfeil" onclick="vorherigesAuto()">&larr;</button>
+      <img id="autobild" src="img/autos/ferrari.png" alt="Ferrari SF-26">
+      <button class="pfeil" onclick="naechstesAuto()">&rarr;</button>
+    </div>
+    <p id="quelle" class="quelle"></p>
+
+    <!-- Technische Daten -->
+    <table class="daten">
+      <tr>
+        <th data-de="Motor" data-en="Engine">Motor</th>
+        <th data-de="Fahrer" data-en="Drivers">Fahrer</th>
+        <th data-de="Sitz" data-en="Base">Sitz</th>
+        <th data-de="Gegründet" data-en="Founded">Gegründet</th>
+      </tr>
+      <tr>
+        <td id="motor">Ferrari</td>
+        <td id="fahrer">Leclerc #16, Hamilton #44</td>
+        <td id="sitz">Maranello, IT</td>
+        <td id="gruendung">1929</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- SECTION 2: Alle Autos -->
+  <section id="autos">
+    <h2 data-de="Alle Autos" data-en="All cars">Alle Autos</h2>
+    <p class="hinweis" data-de="Klick auf ein Auto, um es im Showroom anzusehen." data-en="Click a car to see it in the showroom.">Klick auf ein Auto, um es im Showroom anzusehen.</p>
+    <div class="raster">
+        <div class="karte" onclick="zeigeAuto(0)">
+          <img src="img/autos/mclaren.png" alt="McLaren MCL40">
+          <p class="klein">McLaren</p>
+          <h3>MCL40</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(1)">
+          <img src="img/autos/ferrari.png" alt="Ferrari SF-26">
+          <p class="klein">Ferrari</p>
+          <h3>SF-26</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(2)">
+          <img src="img/autos/redbull.png" alt="Red Bull Racing RB22">
+          <p class="klein">Red Bull Racing</p>
+          <h3>RB22</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(3)">
+          <img src="img/autos/mercedes.png" alt="Mercedes W17">
+          <p class="klein">Mercedes</p>
+          <h3>W17</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(4)">
+          <img src="img/autos/astonmartin.png" alt="Aston Martin AMR26">
+          <p class="klein">Aston Martin</p>
+          <h3>AMR26</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(5)">
+          <img src="img/autos/williams.png" alt="Williams FW48">
+          <p class="klein">Williams</p>
+          <h3>FW48</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(6)">
+          <img src="img/autos/racingbulls.png" alt="Racing Bulls VCARB 03">
+          <p class="klein">Racing Bulls</p>
+          <h3>VCARB 03</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(7)">
+          <img src="img/autos/alpine.png" alt="Alpine A526">
+          <p class="klein">Alpine</p>
+          <h3>A526</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(8)">
+          <img src="img/autos/haas.png" alt="Haas VF-26">
+          <p class="klein">Haas</p>
+          <h3>VF-26</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(9)">
+          <img src="img/autos/audi.png" alt="Audi R26">
+          <p class="klein">Audi</p>
+          <h3>R26</h3>
+        </div>
+        <div class="karte" onclick="zeigeAuto(10)">
+          <img src="img/autos/cadillac.png" alt="Cadillac MAC-26">
+          <p class="klein">Cadillac</p>
+          <h3>MAC-26</h3>
+        </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Infos zur Saison mit Text, Aufzählung, Liste und Links -->
+  <section id="saison">
+    <h2 data-de="Die Saison 2026" data-en="The 2026 season">Die Saison 2026</h2>
+
+    <div class="spalten">
+      <div class="box">
+        <h3 data-de="Neue Regeln, neue Autos" data-en="New rules, new cars">Neue Regeln, neue Autos</h3>
+        <p data-de="2026 gibt es eines der größten Regel-Updates in der Geschichte der Formel 1. Die Autos sind kleiner und leichter, und die Motoren holen ungefähr die Hälfte ihrer Leistung aus Strom."
+           data-en="2026 brings one of the biggest rule changes in Formula 1 history. The cars are smaller and lighter, and the engines get about half of their power from electricity.">2026 gibt es eines der größten Regel-Updates in der Geschichte der Formel 1. Die Autos sind kleiner und leichter, und die Motoren holen ungefähr die Hälfte ihrer Leistung aus Strom.</p>
+      </div>
+
+      <div class="box">
+        <h3 data-de="Das ist neu" data-en="What's new">Das ist neu</h3>
+        <ul>
+          <li data-de="Cadillac startet als 11. Team." data-en="Cadillac joins as the 11th team.">Cadillac startet als 11. Team.</li>
+          <li data-de="Audi übernimmt das Sauber-Team." data-en="Audi takes over the Sauber team.">Audi übernimmt das Sauber-Team.</li>
+          <li data-de="Red Bull baut eigene Motoren mit Ford." data-en="Red Bull builds its own engines with Ford.">Red Bull baut eigene Motoren mit Ford.</li>
+          <li data-de="Aston Martin fährt mit Honda-Motoren." data-en="Aston Martin races with Honda engines.">Aston Martin fährt mit Honda-Motoren.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3 data-de="So bedienst du die Seite" data-en="How to use this site">So bedienst du die Seite</h3>
+        <ol>
+          <li data-de="Mit den Pfeilen wechselst du das Auto." data-en="Use the arrows to switch cars.">Mit den Pfeilen wechselst du das Auto.</li>
+          <li data-de="Unter „Alle Autos“ kannst du jedes Auto anklicken." data-en="Under “All cars” you can click any car.">Unter „Alle Autos“ kannst du jedes Auto anklicken.</li>
+          <li data-de="Oben rechts wechselst du die Sprache." data-en="Switch the language at the top right.">Oben rechts wechselst du die Sprache.</li>
+        </ol>
+      </div>
+    </div>
+
+    <p>
+      <span data-de="Mehr Infos:" data-en="More info:">Mehr Infos:</span>
+      <a href="https://www.formula1.com" target="_blank">formula1.com</a> |
+      <a href="https://www.fia.com" target="_blank">fia.com</a>
+    </p>
+  </section>
+
+  <!-- SECTION 4: Über uns mit Passbild -->
+  <section id="ueber-uns">
+    <h2 data-de="Über uns" data-en="About us">Über uns</h2>
+    <div class="spalten">
+      <div class="person">
+        <img src="img/passbild-1.svg" alt="Passbild Fabio Baumstark">
+        <h3>Fabio Baumstark</h3>
+        <p data-de="Klasse TGM 11, Profil Mechatronik" data-en="Class TGM 11, mechatronics profile">Klasse TGM 11, Profil Mechatronik</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed by Fabio Baumstark</p>
+    <p class="klein">Josef-Durler-Schule Rastatt, 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
